@@ -1,2 +1,4 @@
-fr\valle\mastermind\model\Color.class
+fr\valle\mastermind\model\Answerer.class
+fr\valle\mastermind\model\Game.class
 fr\valle\mastermind\model\Sequence.class
+fr\valle\mastermind\model\Color.class

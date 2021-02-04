@@ -1,3 +1,5 @@
-fr\valle\mastermind\features\MisplacedSteps.class
-fr\valle\mastermind\features\WellPlacedSteps.class
 fr\valle\mastermind\RunFeatureTest.class
+fr\valle\mastermind\features\DefaultSequencesSteps.class
+MyStepdefs.class
+fr\valle\mastermind\features\ReturnNumbersSteps.class
+fr\valle\mastermind\features\FeatureContext.class
