@@ -22,7 +22,7 @@ public class Sequence{
         return colors;
     }
 
-    String name() {
+    public String name() {
         return name;
     }
 

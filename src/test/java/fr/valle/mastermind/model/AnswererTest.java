@@ -10,6 +10,7 @@ import static org.junit.Assert.assertTrue;
 
 public class AnswererTest {
 
+    private Game game;
     private Answerer answerer;
     private Sequence identical1;
     private Sequence identical2;
@@ -18,6 +19,7 @@ public class AnswererTest {
 
     @Before
     public void beforeTest() {
+        this.game = new Game();
         this.answerer = Answerer.builder().build();
         this.identical1 = Sequence.builder().name("sequence_1").colors(List.of("blue", "red", "green", "blue")).build();
         this.identical2 = Sequence.builder().name("sequence_1").colors(List.of("blue", "red", "green", "blue")).build();
@@ -27,19 +29,21 @@ public class AnswererTest {
 
     @Test (expected = Exception.class)
     public void shouldCompareSequenceWithSameSize() throws Exception {
-        answerer.compareSequences(sizeOf2, sizeOf4);
+//        game.setAnswerer(answerer);
+        game.compareSequences(answerer, sizeOf2, sizeOf4);
     }
 
     @Test
     public void should_won_be_false_then_be_true() throws Exception {
-        assertFalse(answerer.isWon());
-        answerer.compareSequences(identical1, identical2);
-        assertTrue(answerer.isWon());
+//        game.setAnswerer(answerer);
+        assertFalse(game.isWon());
+        game.compareSequences(answerer,identical1, identical2);
+        assertTrue(game.isWon());
     }
 
     @Test
     public void should_won_be_false() {
-        assertFalse(answerer.isWon());
+        assertFalse(game.isWon());
     }
 
 }

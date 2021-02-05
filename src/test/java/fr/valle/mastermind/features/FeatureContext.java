@@ -10,22 +10,27 @@ import java.util.Optional;
 
 public class FeatureContext {
 
-    private Answerer answerer = Answerer.builder().build();
+    private Game game = new Game();
 
-    private Game game = new Game(answerer, List.of());
+    private List<Sequence> contextSequences = new ArrayList<>();
 
-    public void addSequencesToGameSequences(Sequence seq){
-        List<Sequence> sequences = new ArrayList<>(game.getSequences());
-        sequences.add(seq);
-
-        game = new Game(answerer, sequences);
+    public FeatureContext() {
+        Answerer answerer = Answerer.builder().build();
+        game.setAnswerer(answerer);
     }
 
-    public List<Sequence> getSequences() { return game.getSequences(); }
+    public void addSequencesToGameSequences(Sequence seq) {
+        contextSequences.add(seq);
+    }
 
     public Optional<Sequence> getSequence(final String sequenceName) {
-        return game.getSequence(sequenceName);
+        return contextSequences.stream().filter(s -> s.name().equals(sequenceName)).findAny();
     }
+
+    public List<Sequence> getContextSequences() {
+        return this.contextSequences;
+    }
+
 
     public Game getGame() {
         return this.game;
