@@ -1,9 +1,12 @@
 package fr.valle.mastermind.model;
 
+import lombok.Builder;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+@Builder
 public class Sequence{
 
     private final String name;

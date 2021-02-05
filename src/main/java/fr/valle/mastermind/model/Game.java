@@ -16,17 +16,9 @@ public class Game {
         this.sequences = sequences;
     }
 
-//    public List<Sequence> getSequences() {
-//        return sequences;
-//    }
-
     public Optional<Sequence> getSequence(final String sequenceName) {
         return sequences.stream().filter(s->s.name().equals(sequenceName)).findAny();
     }
-
-//    public Answerer getAnswerer() {
-//        return answerer;
-//    }
 
     public void compareSequences(Answerer answerer, Sequence seq1, Sequence seq2) throws Exception {
         answerer.compareSequences(seq1, seq2);

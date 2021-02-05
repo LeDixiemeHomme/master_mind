@@ -2,4 +2,5 @@ fr\valle\mastermind\model\Answerer.class
 fr\valle\mastermind\model\Game.class
 Run.class
 fr\valle\mastermind\model\Sequence.class
+fr\valle\mastermind\model\Sequence$SequenceBuilder.class
 fr\valle\mastermind\model\Answerer$AnswererBuilder.class
