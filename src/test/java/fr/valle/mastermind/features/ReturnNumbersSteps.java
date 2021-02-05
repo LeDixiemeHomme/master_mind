@@ -32,17 +32,17 @@ public class ReturnNumbersSteps {
     }
 
     @When("The answerer compare the two sequences")
-    public void theAnswererCompareTheTwoSequences() {
+    public void theAnswererCompareTheTwoSequences() throws Exception {
         featureContext.getGame().compareSequences(featureContext.getGame().getAnswerer(), sequenceToGuess, proposedSequence);
     }
 
     @Then("The number of well placed color returned should be equal to {int}")
     public void theNumberOfWellPlacedColorReturnedShouldBeEqualTo(int wellPlacedColorNumber) {
-        Assertions.assertThat(featureContext.getGame().getAnswerer().numberWellPlaced()).isEqualTo(wellPlacedColorNumber);
+        Assertions.assertThat(featureContext.getGame().getAnswerer().getNumberWellPlaced()).isEqualTo(wellPlacedColorNumber);
     }
 
     @And("the number of correct but misplaced color returned should be equal to {int}")
     public void theNumberOfCorrectButMisplacedColorReturnedShouldBeEqualToNumberOf(int misplacedColorNumber) {
-        Assertions.assertThat(featureContext.getGame().getAnswerer().numberMisplaced()).isEqualTo(misplacedColorNumber);
+        Assertions.assertThat(featureContext.getGame().getAnswerer().getNumberMisplaced()).isEqualTo(misplacedColorNumber);
     }
 }

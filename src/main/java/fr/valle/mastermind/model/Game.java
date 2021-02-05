@@ -1,8 +1,11 @@
 package fr.valle.mastermind.model;
 
+import lombok.Getter;
+
 import java.util.List;
 import java.util.Optional;
 
+@Getter
 public class Game {
 
     private final Answerer answerer;
@@ -13,18 +16,19 @@ public class Game {
         this.sequences = sequences;
     }
 
-    public List<Sequence> getSequences() {
-        return sequences;
-    }
+//    public List<Sequence> getSequences() {
+//        return sequences;
+//    }
+
     public Optional<Sequence> getSequence(final String sequenceName) {
         return sequences.stream().filter(s->s.name().equals(sequenceName)).findAny();
     }
 
-    public Answerer getAnswerer() {
-        return answerer;
-    }
+//    public Answerer getAnswerer() {
+//        return answerer;
+//    }
 
-    public void compareSequences(Answerer answerer, Sequence seq1, Sequence seq2){
+    public void compareSequences(Answerer answerer, Sequence seq1, Sequence seq2) throws Exception {
         answerer.compareSequences(seq1, seq2);
     }
 }

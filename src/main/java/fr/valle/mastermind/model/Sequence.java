@@ -1,38 +1,47 @@
 package fr.valle.mastermind.model;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
 public class Sequence{
 
-//    private List<Color> colors;
-//
-//    public Sequence(List<Color> colors){
-//        this.colors = colors;
-//    }
-//
-//    public List<Color> getColors() {
-//        return colors;
-//    }
-//
-//    public void setColors(List<Color> colors) {
-//        this.colors = colors;
-//    }
-
     private final String name;
-    private final List<String> colors;
+    private List<String> colors;
+    private final List<String> validColors = List.of("red", "blue", "green", "yellow");
 
-    public Sequence(String name, List<String> colors){
+    public Sequence(String name, List<String> colors) {
         this.name = name;
-        this.colors = colors;
+        this.colors = validColorList(colors);
     }
 
-    public List<String> colors() {
+    List<String> colors() {
         return colors;
     }
 
-    public String name() {
+    String name() {
         return name;
+    }
+
+    private List<String> validColorList(List<String> uncheckedColors) {
+        List<String> temp = new ArrayList<>();
+
+        for (String color: uncheckedColors) {
+            try {
+                temp.add(this.isValidColor(color));
+            } catch (Exception e) {
+                System.out.println(e);
+            }
+        }
+        return temp;
+    }
+
+    private String isValidColor(String color) throws Exception {
+        if(validColors.contains(color.toLowerCase())){
+            return color.toLowerCase();
+        } else {
+            throw new Exception("This value is not a correct color, you can choose between those value [red, blue, green, yellow].");
+        }
     }
 
     @Override

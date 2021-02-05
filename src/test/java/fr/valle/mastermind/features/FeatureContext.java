@@ -10,13 +10,15 @@ import java.util.Optional;
 
 public class FeatureContext {
 
-    private Game game = new Game(new Answerer(), List.of());
+    private Answerer answerer = Answerer.builder().build();
+
+    private Game game = new Game(answerer, List.of());
 
     public void addSequencesToGameSequences(Sequence seq){
         List<Sequence> sequences = new ArrayList<>(game.getSequences());
         sequences.add(seq);
 
-        game = new Game(new Answerer(), sequences);
+        game = new Game(answerer, sequences);
     }
 
     public List<Sequence> getSequences() { return game.getSequences(); }

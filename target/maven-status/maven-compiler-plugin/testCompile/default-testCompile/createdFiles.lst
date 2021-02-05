@@ -1,5 +1,5 @@
 fr\valle\mastermind\RunFeatureTest.class
 fr\valle\mastermind\features\DefaultSequencesSteps.class
-MyStepdefs.class
 fr\valle\mastermind\features\ReturnNumbersSteps.class
 fr\valle\mastermind\features\FeatureContext.class
+fr\valle\mastermind\model\AnswererTest.class

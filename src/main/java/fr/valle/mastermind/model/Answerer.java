@@ -1,31 +1,23 @@
 package fr.valle.mastermind.model;
 
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class Answerer {
+@Getter @Setter @Builder public class Answerer {
 
     private int numberWellPlaced;
     private int numberMisplaced;
+    private boolean won;
 
-    public int numberWellPlaced() {
-        return numberWellPlaced;
-    }
+    void compareSequences(Sequence sequenceToGuess, Sequence proposedSequence) throws Exception {
+        if(sequenceToGuess.colors().size() != (proposedSequence.colors().size())){
+            throw new Exception("Sequences should be of the same size");
+        }
 
-    public int numberMisplaced() {
-        return numberMisplaced;
-    }
-
-    private void setNumberWellPlaced(int number){
-        this.numberWellPlaced = number;
-    }
-
-    private void setNumberMisplaced(int number){
-        this.numberMisplaced = number;
-    }
-
-    // TODO faire l'algo qui prend 2 Sequence et renvoie deux int en fonction
-    void compareSequences(Sequence sequenceToGuess, Sequence proposedSequence){
         int numberWellPlaced = 0;
         int numberMisplaced = 0;
         int size = sequenceToGuess.colors().size();
@@ -47,6 +39,7 @@ public class Answerer {
         }
         this.setNumberWellPlaced(numberWellPlaced);
         this.setNumberMisplaced(numberMisplaced);
-    }
 
+        this.setWon(this.getNumberWellPlaced() == size);
+    }
 }
