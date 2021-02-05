@@ -33,7 +33,7 @@ public class ReturnNumbersSteps {
 
     @When("The answerer compare the two sequences")
     public void theAnswererCompareTheTwoSequences() throws Exception {
-        featureContext.getGame().compareSequences(featureContext.getGame().getAnswerer(), sequenceToGuess, proposedSequence);
+        featureContext.getGame().compareSequences(sequenceToGuess, proposedSequence);
     }
 
     @Then("The number of well placed color returned should be equal to {int}")

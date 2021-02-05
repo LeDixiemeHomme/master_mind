@@ -18,7 +18,7 @@ public class DefaultSequencesSteps {
     }
 
     @Before("@default_sequences")
-    public void defaultSequencesAreUsed() {
+    public void defaultSequencesAreUsed() throws Exception {
         List<Sequence> seqs = List.of(
                 new Sequence("goal", List.of("red", "red", "red", "red")),
                 new Sequence("fail_1", List.of("blue", "blue", "blue", "blue")),
@@ -32,7 +32,7 @@ public class DefaultSequencesSteps {
                 new Sequence("sequence_6", List.of("yellow", "yellow", "yellow", "red")),
                 new Sequence("sequence_7", List.of("yellow", "yellow", "red", "yellow"))
         );
-        for (Sequence sequence: seqs) {
+        for (Sequence sequence : seqs) {
             featureContext.addSequencesToGameSequences(sequence);
         }
     }
@@ -43,7 +43,7 @@ public class DefaultSequencesSteps {
     }
 
     @DataTableType
-    public Sequence convert(Map<String, String> table) {
+    public Sequence convert(Map<String, String> table) throws Exception {
         List<String> colors = List.of(
                 table.get("color_1"),
                 table.get("color_2"),

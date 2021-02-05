@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="9" failures="0" name="fr.valle.mastermind.RunFeatureTest" time="0.502" errors="0" skipped="0">
+<testsuite tests="9" failures="0" name="fr.valle.mastermind.RunFeatureTest" time="0.455" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="11.0.5+10-LTS"/>
@@ -46,7 +46,7 @@
     <property name="java.class.path" value="C:\Program Files\JetBrains\IntelliJ IDEA 2019.2.4\plugins\maven\lib\maven3\boot\plexus-classworlds-2.6.0.jar"/>
     <property name="java.vm.specification.version" value="11"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version2019.2.4 test"/>
+    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version2019.2.4 clean package"/>
     <property name="java.home" value="C:\Program Files\Java\jdk-11.0.5"/>
     <property name="user.language" value="fr"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
@@ -64,13 +64,13 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="Definitions" name="Default sequences" time="0.408"/>
-  <testcase classname="show the number of well placed color and the number of correct but misplaced color from a sequence" name="Returning a good number of correct but misplaced color and a good number of well placed color #1" time="0.02"/>
-  <testcase classname="show the number of well placed color and the number of correct but misplaced color from a sequence" name="Returning a good number of correct but misplaced color and a good number of well placed color #2" time="0.013"/>
-  <testcase classname="show the number of well placed color and the number of correct but misplaced color from a sequence" name="Returning a good number of correct but misplaced color and a good number of well placed color #3" time="0.011"/>
-  <testcase classname="show the number of well placed color and the number of correct but misplaced color from a sequence" name="Returning a good number of correct but misplaced color and a good number of well placed color #4" time="0.008"/>
-  <testcase classname="show the number of well placed color and the number of correct but misplaced color from a sequence" name="Returning a good number of correct but misplaced color and a good number of well placed color #5" time="0.01"/>
-  <testcase classname="show the number of well placed color and the number of correct but misplaced color from a sequence" name="Returning a good number of correct but misplaced color and a good number of well placed color #6" time="0.009"/>
-  <testcase classname="show the number of well placed color and the number of correct but misplaced color from a sequence" name="Returning a good number of correct but misplaced color and a good number of well placed color #7" time="0.012"/>
-  <testcase classname="show the number of well placed color and the number of correct but misplaced color from a sequence" name="Returning a good number of correct but misplaced color and a good number of well placed color #8" time="0.011"/>
+  <testcase classname="Definitions" name="Default sequences" time="0.377"/>
+  <testcase classname="show the number of well placed color and the number of correct but misplaced color from a sequence" name="Returning a good number of correct but misplaced color and a good number of well placed color #1" time="0.019"/>
+  <testcase classname="show the number of well placed color and the number of correct but misplaced color from a sequence" name="Returning a good number of correct but misplaced color and a good number of well placed color #2" time="0.011"/>
+  <testcase classname="show the number of well placed color and the number of correct but misplaced color from a sequence" name="Returning a good number of correct but misplaced color and a good number of well placed color #3" time="0.013"/>
+  <testcase classname="show the number of well placed color and the number of correct but misplaced color from a sequence" name="Returning a good number of correct but misplaced color and a good number of well placed color #4" time="0.007"/>
+  <testcase classname="show the number of well placed color and the number of correct but misplaced color from a sequence" name="Returning a good number of correct but misplaced color and a good number of well placed color #5" time="0.007"/>
+  <testcase classname="show the number of well placed color and the number of correct but misplaced color from a sequence" name="Returning a good number of correct but misplaced color and a good number of well placed color #6" time="0.007"/>
+  <testcase classname="show the number of well placed color and the number of correct but misplaced color from a sequence" name="Returning a good number of correct but misplaced color and a good number of well placed color #7" time="0.014"/>
+  <testcase classname="show the number of well placed color and the number of correct but misplaced color from a sequence" name="Returning a good number of correct but misplaced color and a good number of well placed color #8" time="0"/>
 </testsuite>

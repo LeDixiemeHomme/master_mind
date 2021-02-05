@@ -18,7 +18,7 @@ public class AnswererTest {
     private Sequence sizeOf4;
 
     @Before
-    public void beforeTest() {
+    public void beforeTest() throws Exception {
         this.game = new Game();
         this.answerer = Answerer.builder().build();
         this.identical1 = Sequence.builder().name("sequence_1").colors(List.of("blue", "red", "green", "blue")).build();
@@ -27,17 +27,17 @@ public class AnswererTest {
         this.sizeOf4 = Sequence.builder().name("sequence_1").colors(List.of("blue", "red", "green", "blue")).build();
     }
 
-    @Test (expected = Exception.class)
+    @Test(expected = Exception.class)
     public void shouldCompareSequenceWithSameSize() throws Exception {
-//        game.setAnswerer(answerer);
-        game.compareSequences(answerer, sizeOf2, sizeOf4);
+        game.setAnswerer(answerer);
+        game.compareSequences(sizeOf2, sizeOf4);
     }
 
     @Test
     public void should_won_be_false_then_be_true() throws Exception {
-//        game.setAnswerer(answerer);
+        game.setAnswerer(answerer);
         assertFalse(game.isWon());
-        game.compareSequences(answerer,identical1, identical2);
+        game.compareSequences(identical1, identical2);
         assertTrue(game.isWon());
     }
 

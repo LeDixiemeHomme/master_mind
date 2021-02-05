@@ -12,10 +12,7 @@ public class Game {
     private Sequence proposedSequence;
     private boolean won;
 
-    public Game() {
-    }
-
-    public void compareSequences(Answerer answerer, Sequence seq1, Sequence seq2) throws Exception {
-        this.setWon(answerer.compareSequences(seq1, seq2));
+    public void compareSequences(Sequence seq1, Sequence seq2) throws Exception {
+        this.setWon(this.answerer.compareSequences(seq1, seq2));
     }
 }
